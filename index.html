@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Render Keep Alive</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🚀 Render Keep Alive</h1>
+
+            <p class="subtitle">
+                Keep your Render backend active
+            </p>
+
+            <label for="backendUrl">Backend Health URL</label>
+
+            <input
+                type="text"
+                id="backendUrl"
+                value="https://qr-link-shortener.onrender.com/api/health/"
+                placeholder="https://your-backend.onrender.com/api/health/"
+            >
+
+            <div class="status-box">
+
+                <div class="status">
+                    <span id="statusDot" class="dot stopped"></span>
+                    <span id="statusText">Stopped</span>
+                </div>
+
+                <div class="info">
+                    <span>Last ping</span>
+                    <strong id="lastPing">—</strong>
+                </div>
+
+                <div class="info">
+                    <span>Next ping</span>
+                    <strong id="nextPing">—</strong>
+                </div>
+
+                <div class="info">
+                    <span>Successful</span>
+                    <strong id="successCount">0</strong>
+                </div>
+
+                <div class="info">
+                    <span>Failed</span>
+                    <strong id="failureCount">0</strong>
+                </div>
+
+            </div>
+
+            <button id="startBtn">
+                Start Keep Alive
+            </button>
+
+            <button id="stopBtn" class="stop-btn" disabled>
+                Stop
+            </button>
+
+            <div class="schedule">
+                <h3>Schedule</h3>
+
+                <p>
+                    🟢 Active: <strong>6:00 AM → 1:00 AM</strong>
+                </p>
+
+                <p>
+                    ⏱️ Ping interval: <strong>12 minutes</strong>
+                </p>
+
+                <p>
+                    🌙 Paused: <strong>1:00 AM → 6:00 AM</strong>
+                </p>
+            </div>
+
+            <p class="note">
+                Keep this page open while the keep-alive is running.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
