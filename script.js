@@ -14,8 +14,8 @@ const failureCount = document.getElementById("failureCount");
 
 
 // 12 minutes
-//const INTERVAL = 12 * 60 * 1000;
-const INTERVAL = 10 * 1000;
+const INTERVAL = 12 * 60 * 1000;
+//const INTERVAL = 10 * 1000;
 
 // Keep track of the timer
 let timer = null;
